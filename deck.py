@@ -2,7 +2,7 @@ import random
 
 class Deck:
 
-    Descriptions = {"Read Spec" : "Peeks at a goal to check if correct or not",\
+    DESCRIPTIONS = {"Read Spec" : "Peeks at a goal to check if correct or not",\
         "Add Code" : "Adds a line of code",\
         "Add Code - Assignment or Initialization" : "Add an Assignment or Initialization",\
         "Add Code - Arithmetic or other Basic Functions" : "Add Arithmetic Function or another Function Call",\
@@ -86,7 +86,7 @@ class Deck:
         return self.discard
 
     def info(self, card):
-        return INFO[card]
+        return DESCRIPTIONS[card]
 
         
 
