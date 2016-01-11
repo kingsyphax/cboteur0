@@ -19,7 +19,10 @@ def main():
         return
 
     # SET UP PLAYERS
+    deck = Deck()
     players = list(range(1, num_players + 1))
+    player_cards = {}
+    player_conditions = {}
 
     num_saboteurs = NUM_SABOTEURS[num_players]
     role_cards = ["saboteur"] * num_saboteurs + ["miner"] * (num_players - num_saboteurs + 1)
@@ -31,7 +34,7 @@ def main():
         if role == "saboteur":
             saboteurs.append(player)
 
-    # TELL WHO IS DA SABOTEUR
+    # TELL WHO IS DA SABOTEUR and draw the cards
     for player in players:
         time.sleep(1)
         os.system("clear")
@@ -41,7 +44,11 @@ def main():
             print("You are a SABOTEUR")
         else:
             print("You are a MINER")
-
+        player_conditions[player] = []
+        player_hand = []
+        while len(player_hand) < 5:
+            player_hand.append(deck.draw())
+        player_cards[player] = player_hand
 
     # DO GAME
     while True: # game loop
