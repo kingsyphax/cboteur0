@@ -55,6 +55,7 @@ def main():
     # DO GAME
     while True: # game loop
         print("Current player: Player %d" % current_player)
+        print(player_cards[player])
 
         pass
 
