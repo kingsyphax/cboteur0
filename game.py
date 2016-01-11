@@ -49,24 +49,64 @@ def main():
             correct_input = False
             while not correct_input:
                 target = input("Choose who to trap")
+                if target in player_names:
+                    target = player_names[target]
+                    correct_input = True
+                try:
+                    target = int(input)
+                    correct_input = True
+                except ValueError:
+                    pass
         elif card == "Stack Overflow Down":
             pass
         elif card == "Charger":
             correct_input = False
             while not correct_input:
                 target = input("Choose who to free")
+                if target in player_names:
+                    target = player_names[target]
+                    correct_input = True
+                try:
+                    target = int(input)
+                    correct_input = True
+                except ValueError:
+                    pass
         elif card == "Internet Cafe":
             correct_input = False
             while not correct_input:
                 target = input("Choose who to free")
+                if target in player_names:
+                    target = player_names[target]
+                    correct_input = True
+                try:
+                    target = int(input)
+                    correct_input = True
+                except ValueError:
+                    pass
         elif card == "Go to Soda":
             correct_input = False
             while not correct_input:
                 target = input("Choose who to free")
+                if target in player_names:
+                    target = player_names[target]
+                    correct_input = True
+                try:
+                    target = int(input)
+                    correct_input = True
+                except ValueError:
+                    pass
         elif card == "Code Guide":
             correct_input = False
             while not correct_input:
                 target = input("Choose who to free")
+                if target in player_names:
+                    target = player_names[target]
+                    correct_input = True
+                try:
+                    target = int(input)
+                    correct_input = True
+                except ValueError:
+                    pass
         elif card == "Stack Overflow Restored":
             pass
         elif card == "Run":
