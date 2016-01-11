@@ -17,6 +17,7 @@ def main():
 
     while True: # game loop
         print("Current player: Player %d" % current_player)
+
         pass
 
 
