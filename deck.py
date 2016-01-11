@@ -1,6 +1,9 @@
 import random.shuffle
 class Deck:
-	self.goals = [""]
+	#self.goals = [""]
+
+	self.discard = []
+
 	def __init__(self):
 		""" 
 		List of cards and descriptions for Deck:
@@ -18,10 +21,10 @@ class Deck:
 		Code Guide - Makes a single player immune to Stack Overflow Down effect
 		Stack Overflow Restored - Can not be skipped. Removes all effects of ongoing Stack Overflow Down.
 		(Compile/Run) - Runs the code. After 3? run cards are played total, the game ends and winner is decided.
-
+		Currently 85 cards total
 		"""
 		self.cards = ["Read Spec"] * 5 \
-		+ ["Add Line"] * 20 \
+		+ ["Add Line"] * 21 \
 		+ ["Modify Line"] * 12 \
 		+ ["Dead Battery"] * 5 \
 		+ ["Disconnected WiFi"] * 5 \
@@ -31,8 +34,18 @@ class Deck:
 		+ ["Go to Soda"] * 5 \
 		+ ["Code Guide"] * 5 \
 		+ ["Stack Overflow Restored"] * 3 \
-		+ ["Run Code"] * 10
+		+ ["Run Code"] * 11
 		random.shuffle(self.cards)
+
+	def draw(self):
+		return self.cards.pop()
+
+	def discard(self, card):
+		self.discard += list(card)
+
+	def view_discard(self):
+		return self.discard
+
 		
 
 
