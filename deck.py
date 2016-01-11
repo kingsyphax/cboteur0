@@ -86,7 +86,7 @@ class Deck:
         return self.discard
 
     def info(self, card):
-        return DESCRIPTIONS[card]
+        return Deck.DESCRIPTIONS[card]
 
         
 

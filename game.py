@@ -94,12 +94,12 @@ def main():
                 card_to_do = input("Card not found. Select a card: ")
 
             if card_to_do in player_cards[current_player]:
-                card_number = player_cards[current_player].find(card_to_do) + 1
+                card_number = player_cards[current_player].index(card_to_do) + 1
             else:
                 card_number = int(card_to_do)
 
             card_name = player_cards[current_player][card_number - 1]
-            print(deck.info(card_name))
+            print("%s: %s" % (card_name, deck.info(card_name)))
 
             time.sleep(1)
 
