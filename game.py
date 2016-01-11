@@ -43,12 +43,11 @@ def main():
 
     # GET NUMBER OF PLAYERS
     if len(sys.argv) > 1:
-        if sys.argv[-1] == "-t":
+        num_players = int(sys.argv[-1])
+
+        if sys.argv[-2] == "-t":
             DEBUG = True
-        if DEBUG:
-            num_players = int(sys.argv[-2])
-        else:
-            num_players = int(sys.argv[-1])
+
         current_player = 1
 
         print("There are %d players" % num_players)
