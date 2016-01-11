@@ -23,18 +23,39 @@ def main():
         elif card == "Modify Line - Change Line":
         elif card == "Nuke":
         elif card == "Dead Battery":
-            target = input("Choose who to trap")
+            correct_input = False
+            while not correct_input:
+                target = input("Choose who to trap")
+                if target in player_names:
+                    target = player_names[target]
+                    correct_input = True
+                try:
+                    target = int(input)
+                    correct_input = True
+                except ValueError:
+
+
         elif card == "Disconnected WiFi":
-            target = input("Choose who to trap")
+            correct_input = False
+            while not correct_input:
+                target = input("Choose who to trap")
         elif card == "Stack Overflow Down":
         elif card == "Charger":
-            target = input("Choose who to free")
+            correct_input = False
+            while not correct_input:
+                target = input("Choose who to free")
         elif card == "Internet Cafe":
-            target = input("Choose who to free")
+            correct_input = False
+            while not correct_input:
+                target = input("Choose who to free")
         elif card == "Go to Soda":
-            target = input("Choose who to free")
+            correct_input = False
+            while not correct_input:
+                target = input("Choose who to free")
         elif card == "Code Guide":
-            target = input("Choose who to free")
+            correct_input = False
+            while not correct_input:
+                target = input("Choose who to free")
         elif card == "Stack Overflow Restored":
         elif card == "Run":
         else:
@@ -62,6 +83,7 @@ def main():
     players = list(range(1, num_players + 1))
     player_cards = {}
     player_conditions = {}
+    player_names = {}
 
     num_saboteurs = NUM_SABOTEURS[num_players]
     role_cards = ["saboteur"] * num_saboteurs + ["miner"] * (num_players - num_saboteurs + 1)
