@@ -6,6 +6,7 @@ import random
 import time
 
 NUM_SABOTEURS = {3: 1, 4: 1, 5: 2, 6: 2, 7: 3, 8: 3, 9: 3, 10: 4}
+GOALS = [] #COMPLETE
 
 def main():
     # GET NUMBER OF PLAYERS
@@ -18,7 +19,8 @@ def main():
         print("Please provide a number of players")
         return
 
-    # SET UP PLAYERS
+    # SET UP PLAYERS AND GAME ENVIRONMENT
+    goal = [] #random 3 from goals
     deck = Deck()
     players = list(range(1, num_players + 1))
     player_cards = {}
