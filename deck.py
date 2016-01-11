@@ -23,7 +23,7 @@ class Deck:
         "Go to Soda" : "Removes a Dead Battery and a Disconnected Wifi trap",\
         "Code Guide" : "Makes a single player immune to Stack Overflow Down effect",\
         "Stack Overflow Restored" : "Can not be skipped. Removes all effects of ongoing Stack Overflow Down.",\
-        "Run" : "Runs the code. After 3 run cards are played total, the game ends and winner is decided."}
+        "Run Code" : "Runs the code. After 3 run cards are played total, the game ends and winner is decided."}
 
     def __init__(self):
         """ 
