@@ -67,23 +67,23 @@ class Deck:
         + ["Stack Overflow Restored"] * 3 \
         + ["Run Code"] * 12
 
-        self.discard = []
+        self.discarded = []
 
         random.shuffle(self.cards)
 
     def draw(self):
         card = self.cards.pop()
         if len(self.cards) == 0:
-            self.cards = self.discard
-            self.discard = []
+            self.cards = self.discarded
+            self.discarded = []
             random.shuffle(self.cards)
         return card
 
     def discard(self, card):
-        self.discard += list(card)
+        self.discarded += list(card)
 
     def view_discard(self):
-        return self.discard
+        return self.discarded
 
     def info(self, card):
         return DESCRIPTIONS[card]

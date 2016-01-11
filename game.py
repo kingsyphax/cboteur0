@@ -23,13 +23,18 @@ def main():
         elif card == "Modify Line - Change Line":
         elif card == "Nuke":
         elif card == "Dead Battery":
-            
+            target = input("Choose who to trap")
         elif card == "Disconnected WiFi":
+            target = input("Choose who to trap")
         elif card == "Stack Overflow Down":
         elif card == "Charger":
+            target = input("Choose who to free")
         elif card == "Internet Cafe":
+            target = input("Choose who to free")
         elif card == "Go to Soda":
+            target = input("Choose who to free")
         elif card == "Code Guide":
+            target = input("Choose who to free")
         elif card == "Stack Overflow Restored":
         elif card == "Run":
         else:
