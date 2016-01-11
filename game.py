@@ -11,7 +11,28 @@ GOALS = [] #COMPLETE
 
 def main():
     def play_card(player_number, card):
-        pass
+        if card == "Read Spec":
+        elif card == "Add Code - Assignment or Initialization":
+        elif card == "Add Code - Arithmetic or other Basic Functions":
+        elif card == "Add Code - Print or Return":
+        elif card == "Add Code - Conditional or Loop":
+        elif card == "Add Code - Anything":
+        elif card == "Modify Lines - Change Constants":
+        elif card == "Modify Lines - Change Variables":
+        elif card == "Modify Lines - Change Functions":
+        elif card == "Modify Line - Change Line":
+        elif card == "Nuke":
+        elif card == "Dead Battery":
+            
+        elif card == "Disconnected WiFi":
+        elif card == "Stack Overflow Down":
+        elif card == "Charger":
+        elif card == "Internet Cafe":
+        elif card == "Go to Soda":
+        elif card == "Code Guide":
+        elif card == "Stack Overflow Restored":
+        elif card == "Run":
+        else:
 
     DEBUG = False
 
