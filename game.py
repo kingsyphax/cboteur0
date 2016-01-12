@@ -151,7 +151,7 @@ def main():
         while not thing_done:
             card_to_do = input("Select a card (name or number): ")
 
-            while card_to_do not in player_cards[current_player] and int(card_to_do) not in range(1, len(player_cards[current_player]) + 1):
+            while card_to_do not in player_cards[current_player] and (card_to_do == "" or int(card_to_do) not in range(1, len(player_cards[current_player]) + 1)):
                 card_to_do = input("Card not found. Select a card: ")
 
             if card_to_do in player_cards[current_player]:
