@@ -7,7 +7,7 @@ import time
 from deck import Deck
 
 NUM_SABOTEURS = {3: 1, 4: 1, 5: 2, 6: 2, 7: 3, 8: 3, 9: 3, 10: 4}
-GOALS = [] #COMPLETE
+GOALS = [] # COMPLETE
 
 def main():
     def play_card(player_number, card):
@@ -114,7 +114,7 @@ def main():
             player_hand.append(deck.draw())
         player_cards[player] = player_hand
 
-    # TELL WHO IS DA SABOTEUR
+    # TELL WHO IS DA SABOTEUR AND GET ALL DA NAMES
     if not DEBUG:
         time.sleep(1)
         for player in players:
@@ -125,6 +125,10 @@ def main():
                 print("You are a SABOTEUR")
             else:
                 print("You are a MINER")
+            
+            time.sleep(0.5)
+
+            player_names[input("What is your name? ")] = player
 
             time.sleep(1)
             input("Press Enter to continue")
